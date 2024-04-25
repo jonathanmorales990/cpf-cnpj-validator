@@ -1,7 +1,7 @@
 {
-  "name": "cpf-cnpj-validator",
+  "name": "cpf-and-cnpj-validators",
   "version": "1.0.0",
-  "description": "CPF and CNPJ Validator",
+  "description": "CPF and CNPJ Validators",
   "main": "dist/bundle.js",
   "scripts": {
     "build": "webpack"
