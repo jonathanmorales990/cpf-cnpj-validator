@@ -1,6 +1,6 @@
 {
   "name": "cpf-and-cnpj-validators",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "CPF and CNPJ Validators",
   "main": "dist/bundle.js",
   "scripts": {
