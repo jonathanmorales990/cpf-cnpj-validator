@@ -20,7 +20,6 @@ pnpm install cpf-and-cnpj-validators --shamefully-hoist
 ## How to use
 Simply import the functions and utilize them. They will return true if the CPF or CNPJ is valid and false if it's not.
 
-```
 ```javascript
 // Import using CommonJS (require):
 const { validateCPF, validateCNPJ } = require('cpf-and-cnpj-validators');
