@@ -22,40 +22,40 @@ function validateCNPJ(value)  {
     return false;
   }
 
-  let tamanho = cnpj.length - 2;
-  let numeros = cnpj.substring(0, tamanho);
-  const digitos = cnpj.substring(tamanho);
-  let soma = 0;
-  let pos = tamanho - 7;
+  let size = cnpj.length - 2;
+  let numbers = cnpj.substring(0, size);
+  const digits = cnpj.substring(size);
+  let sum = 0;
+  let pos = size - 7;
 
-  for (let i = tamanho; i >= 1; i--) {
-    soma += numeros.charAt(tamanho - i) * pos--;
+  for (let i = size; i >= 1; i--) {
+    sum += numbers.charAt(size - i) * pos--;
     if (pos < 2) {
       pos = 9;
     }
   }
-  let resultado = soma % 11 < 2 ? 0 : 11 - soma % 11;
+  let result = sum % 11 < 2 ? 0 : 11 - sum % 11;
 
-  if (resultado.toString() !== digitos.charAt(0)) {
+  if (result.toString() !== digits.charAt(0)) {
     return false;
   }
 
-  tamanho = tamanho + 1;
-  numeros = cnpj.substring(0, tamanho);
-  soma = 0;
-  pos = tamanho - 7;
+  size = size + 1;
+  numbers = cnpj.substring(0, size);
+  sum = 0;
+  pos = size - 7;
 
-  for (let i = tamanho; i >= 1; i--) {
-    soma += numeros.charAt(tamanho - i) * pos--;
+  for (let i = size; i >= 1; i--) {
+    sum += numbers.charAt(size - i) * pos--;
     if (pos < 2) {
       pos = 9;
     }
 
   }
 
-  resultado = soma % 11 < 2 ? 0 : 11 - soma % 11;
+  result = sum % 11 < 2 ? 0 : 11 - sum % 11;
 
-  if (resultado.toString() !== digitos.charAt(1)) {
+  if (result.toString() !== digits.charAt(1)) {
     return false;
   }
 
